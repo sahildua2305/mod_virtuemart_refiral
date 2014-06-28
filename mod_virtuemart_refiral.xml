@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+	<name>Virtuemart Refiral</name>
+    <author>Refiral</author>
+    <version>1.0.0</version>
+	<creationDate>June 2014</creationDate>
+    <description>Refiral marketing tool for Virtuemart</description>
+	<copyright>This module is released under the GNU/GPL License</copyright>
+	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>support@refiral.com</authorEmail>
+	<authorUrl>www.refiral.com</authorUrl>
+    <files>
+        <filename>mod_virtuemart_refiral.xml</filename>
+        <filename module="mod_virtuemart_refiral">mod_virtuemart_refiral.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+    <config>
+		<fields name="params">
+			<fieldset name="settings" label="Refiral Campaign Settings">
+				<field name="apiKey" type="text" label="Refiral API key:" size="50" description="Fill in the API key you got from your Refiral Dashboard."/>
+				<field name="campaign_on" type="radio" default="1" label="Activate Campaign:" size="50">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+		</fields>
+    </config>
+</extension>
