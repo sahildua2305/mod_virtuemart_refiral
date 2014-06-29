@@ -23,7 +23,7 @@ else{
 	echo 'var showButton = true;';
 }
 echo '</script>';
-echo '<script src="//rfer.co/api/v0/js/all.js"></script>';
+echo '<script src="//rfer.co/api/v1/js/all.js"></script>';
 
 if($_POST['task'] == 'confirm'){
 	$customer_name = $_SESSION['customer_name'];
