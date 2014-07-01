@@ -26,13 +26,13 @@ echo '</script>';
 echo '<script src="//rfer.co/api/v1/js/all.js"></script>';
 
 if($_POST['task'] == 'confirm'){
-	$customer_name = $_SESSION['customer_name'];
-	$customer_email = $_SESSION['customer_email'];
-	$couponCode = $_SESSION['couponCode'];
-	$subTotal = $_SESSION['subTotal'];
-	$grandTotal = $_SESSION['grandTotal'];
+	$customer_name = $_SESSION['refiral']['customer_name'];
+	$customer_email = $_SESSION['refiral']['customer_email'];
+	$couponCode = $_SESSION['refiral']['couponCode'];
+	$subTotal = $_SESSION['refiral']['subTotal'];
+	$grandTotal = $_SESSION['refiral']['grandTotal'];
+	$refiral_cart = $_SESSION['refiral']['refiral_cart'];
 	
-	$refiral_cart = $_SESSION['refiral_cart'];
 	$refiral_cart_items = array();
 	foreach($refiral_cart as $product){
 		$refiral_cart_items[] = array('product_id' => $product->virtuemart_product_id,
@@ -40,8 +40,9 @@ if($_POST['task'] == 'confirm'){
 									'name'         => $product->product_name,
 									'price'        => $product->product_price);
 	}
-	$refiral_cart_info = json_encode($refiral_cart_items);
+	$refiral_cart_info = serialize($refiral_cart_items);
 	
 	echo "<script>invoiceRefiral('$subTotal', '$grandTotal', '$couponCode', '$refiral_cart_info', '$customer_name', '$customer_email');</script>";
+	unset($_SESSION['refiral']);
 }
 

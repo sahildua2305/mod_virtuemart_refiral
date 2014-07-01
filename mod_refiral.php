@@ -33,12 +33,12 @@ if($_POST['task'] == 'confirm'){
 }
 else{
 	$confirmed = 0;
-	$_SESSION['customer_name'] = $firstName." ".$lastName;
-	$_SESSION['customer_email'] = $email;
-	$_SESSION['couponCode'] = $cart->couponCode;
-	$_SESSION['grandTotal'] = preg_replace("/[^0-9.,]/", "", $data->billTotal);
-	$_SESSION['subTotal'] = '';
-	$_SESSION['refiral_cart'] = $cart->products;
+	$_SESSION['refiral']['customer_name'] = $firstName." ".$lastName;
+	$_SESSION['refiral']['customer_email'] = $email;
+	$_SESSION['refiral']['couponCode'] = $cart->couponCode;
+	$_SESSION['refiral']['grandTotal'] = preg_replace("/[^0-9.,]/", "", $data->billTotal);
+	$_SESSION['refiral']['subTotal'] = '';
+	$_SESSION['refiral']['refiral_cart'] = $cart->products;
 }
 
 require( JModuleHelper::getLayoutPath( 'mod_virtuemart_refiral' ) );

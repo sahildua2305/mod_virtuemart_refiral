@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="3.1.0" client="site" method="upgrade">
-	<name>Virtuemart Refiral</name>
+	<name>Refiral for Virtuemart</name>
     <author>Refiral</author>
     <version>1.0.0</version>
 	<creationDate>June 2014</creationDate>
-    <description>Refiral marketing tool for Virtuemart</description>
+    <description>Launch your referral campaign virally. Refiral helps you run your personalized, easy to integrate fully automated referral program.</description>
 	<copyright>This module is released under the GNU/GPL License</copyright>
 	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
 	<authorEmail>support@refiral.com</authorEmail>
 	<authorUrl>www.refiral.com</authorUrl>
     <files>
-        <filename>mod_virtuemart_refiral.xml</filename>
-        <filename module="mod_virtuemart_refiral">mod_virtuemart_refiral.php</filename>
+        <filename>mod_refiral.xml</filename>
+        <filename module="mod_virtuemart_refiral">mod_refiral.php</filename>
         <filename>index.html</filename>
         <filename>helper.php</filename>
         <filename>tmpl/default.php</filename>
